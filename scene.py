@@ -16,4 +16,6 @@ class Scene(ABC):
         print(f"mouse{event.button} released ")
 
     def motion_handler(self, event):
-        print(f"[{event.pos}, {event.rel}]")
+        vel = (event.rel[0] ** 2 + event.rel[1] **2) ** 0.5
+        if vel > 100:
+            print(f"mouse pos: {event.pos}, mouse vel:{event.rel}")

@@ -1,6 +1,6 @@
 import pygame as pg
 import sys
-from world import Overworld
+from overworld import Overworld
 
 def handle_events(scene):
     for event in pg.event.get():
